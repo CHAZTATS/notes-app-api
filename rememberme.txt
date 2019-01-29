@@ -1,0 +1,16 @@
+userid: USER-SUB-1234
+noteid from created note1: 4ce374b0-20c2-11e9-993d-cf2d572cb845
+
+npx aws-api-gateway-cli-test \
+--username='admin@example.com' \
+--password='Passw0rd!' \
+--user-pool-id='eu-west-1_BUNxOFFll' \
+--app-client-id='2j0t97tf6etvbrrmn90kndnna1' \
+--cognito-region='eu-west-1' \
+--identity-pool-id='eu-west-1:52595be2-1d4b-440a-a317-18a7e9d8f155' \
+--invoke-url='https://3nhcgr2ayl.execute-api.eu-west-1.amazonaws.com/prod' \
+--api-gateway-region='eu-west-1' \
+--path-template='/notes' \
+--method='POST' \
+--body='{"content":"hello world","attachment":"hello.jpg"}'
+
